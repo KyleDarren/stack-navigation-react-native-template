@@ -1,18 +1,15 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, Alert } from 'react-native';
+import { View, Text, Button, StyleSheet, } from 'react-native';
 
-const HomeScreen = () => {
-  const handlePress = () => {
-    Alert.alert("Button Pressed", "You pressed the button!");
-  };
-
+export default function Screen1({ navigation }) {
+  
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to My App</Text>
+      <Text style={styles.title}>Welcome</Text>
       <Text style={styles.description}>
-        This is a simple React Native screen with a button.
+        Start customizing this template
       </Text>
-      <Button title="Press Me" onPress={handlePress} />
+      <Button title="Go to Screen2" onPress={() => navigation.navigate("Screen2")} />
     </View>
   );
 };
@@ -36,5 +33,3 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
-
-export default HomeScreen;

@@ -1,16 +1,15 @@
-import React from 'react';
 import { View, Text, Button, StyleSheet, Alert } from 'react-native';
 
-const AboutScreen = () => {
+export default function Screen2() {
   const handlePress = () => {
     Alert.alert("Button Pressed", "You pressed the button!");
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>About the App</Text>
+      <Text style={styles.title}>About</Text>
       <Text style={styles.description}>
-        This is a simple React Native screen with a button.
+        This is a simple react native stack navigation template.
       </Text>
       <Button title="Press Me" onPress={handlePress} />
     </View>
@@ -36,5 +35,3 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
-
-export default AboutScreen;
